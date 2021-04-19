@@ -17,7 +17,7 @@ const router = async () => {
     window.history.replaceState({}, document.title, "/");
   }
 
-  if (await window.auth0Client.isAuthenticated())
+  if (await window.auth0Client.isAuthenticated()) {
    window.user = await window.auth0Client.getUser();
  }
 
